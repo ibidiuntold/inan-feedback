@@ -1,5 +1,6 @@
 import { Inter } from "next/font/google";
 import type { Metadata } from "next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "../styles/globals.css";
 import RecaptchaProvider from "../components/RecaptchaProvider";
 import { getAdminDb } from "../lib/firebaseAdmin";
@@ -72,6 +73,7 @@ export default function RootLayout({
             </div>
           </RecaptchaProvider>
         </div>
+        <SpeedInsights />
       </body>
     </html>
   );
